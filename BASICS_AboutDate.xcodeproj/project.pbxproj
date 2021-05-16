@@ -49,6 +49,7 @@
 		0D56E37C2645161F00A533DA /* BASICS_AboutDateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BASICS_AboutDateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D56E3802645161F00A533DA /* BASICS_AboutDateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BASICS_AboutDateUITests.swift; sourceTree = "<group>"; };
 		0D56E3822645161F00A533DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE7EDB02651125F00B68EB6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 				0D56E3742645161F00A533DA /* BASICS_AboutDateTests */,
 				0D56E37F2645161F00A533DA /* BASICS_AboutDateUITests */,
 				0D56E35C2645161000A533DA /* Products */,
+				0DE7EDAF2651125E00B68EB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +128,14 @@
 				0D56E3822645161F00A533DA /* Info.plist */,
 			);
 			path = BASICS_AboutDateUITests;
+			sourceTree = "<group>";
+		};
+		0DE7EDAF2651125E00B68EB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0DE7EDB02651125F00B68EB6 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
