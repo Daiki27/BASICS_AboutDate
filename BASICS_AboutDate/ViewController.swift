@@ -13,6 +13,7 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
     var locationManager: CLLocationManager!
     @IBOutlet weak var latLabel: UILabel!
     @IBOutlet weak var logLabel: UILabel!
+    @IBOutlet weak var todayDateLabel: UILabel!
     
     // 測位精度
     let locationAccuracy: [Double] = [
@@ -28,9 +29,10 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
         super.viewDidLoad()
         //現在の日程を取得.
         let myCalendar = Calendar(identifier: .gregorian)
-        let ymd = myCalendar.dateComponents([.year, .month, .day, .weekday, .timeZone], from: Date())
-        print(ymd)
-        
+        let ymdwt = myCalendar.dateComponents([.year, .month, .day, .weekday, .timeZone], from: Date())
+        let year = myCalendar.dateComponents([.year], from: Date())
+        let month = myCalendar.dateComponents([.month], from: Date())
+        todayDateLabel?.text = String(year.year!) + "年" + String(month.month!) + "月"
         //現在位置の取得.
         
         // locationManager初期化
@@ -61,17 +63,21 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager,
                 didUpdateLocations locations: [CLLocation]) {
-        // 最初のデータ
+        //最初のデータ
         let location = locations.first
 
         print("Here")
-        // 緯度
+        //緯度
         let latitude = location?.coordinate.latitude
-        // 経度
+        //経度
         let longitude = location?.coordinate.longitude
 
-        latLabel?.text = String(latitude!)
-        logLabel?.text = String(longitude!)
+        //小数２桁にする
+        let latitudeDisplay = round(latitude!*10)/10
+        let longitudeDisplay = round(longitude!*10)/10
+        
+        latLabel?.text = "緯度：" + String(latitudeDisplay)
+        logLabel?.text = "経度：" + String(longitudeDisplay)
         
         print("latitude: \(latitude!)")
         print("longitude: \(longitude!)")
