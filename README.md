@@ -6,6 +6,11 @@ let myCalendar = Calendar(identifier: .gregorian)
 let ymdwt = myCalendar.dateComponents([.year, .month, .day, .weekday, .timeZone], from: Date())
 print(ymdwt)
 ```
+DataComponents型からIntへの変換の仕方[ref](https://stackoverflow.com/questions/56011193/convert-datecomponent-to-int).
+```
+let year = myCalendar.dateComponents([.year], from: Date())
+yearInt = year.year
+```
 
 ### 位置情報の取得
 * FrameWork : [Core Location](https://developer.apple.com/documentation/corelocation/)を使用する.
