@@ -19,5 +19,12 @@ yearInt = year.year
    * Core Locationサービスの設定、起動、停止を行うには, CLLocationManagerクラスのインスタンスを使用する.
    * 位置情報サービスを利用するには, アプリが認証を要求し, システムがユーザに認証の可否を促します。
 
+* Swift Article : [Adding Location Services to Your App](https://developer.apple.com/documentation/corelocation/adding_location_services_to_your_app) 
+
+#### Reference
+* [How To Get Current Location in Swift](https://www.zerotoappstore.com/how-to-get-current-location-in-swift.html)
+* [How to get the current location latitude and longitude in iOS?](https://www.tutorialspoint.com/how-to-get-the-current-location-latitude-and-longitude-in-ios)
+* [[iPhone] GPSなど位置情報をCoreLocationを使って取得](https://i-app-tec.com/ios/core-location.html)
+
 ### 天気の取得
 [OpenWeather社](https://openweathermap.org)の[WhetherAPI](https://openweathermap.org/api)を使用して天気を取得することができる.
